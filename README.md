@@ -35,3 +35,7 @@ source ~/.bashrc
 ```
 ./build-openssl-android.sh 1.0.2-beta3
 ```
+
+
+## Reference
+* http://wiki.openssl.org/index.php/Android
