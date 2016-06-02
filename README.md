@@ -1,5 +1,14 @@
 # build-openssl-android
-A simple bash script for building openssl android.
+A simple shell script for building openssl android.
+
+Now that OpenSSL moved from their webpage to a GitHub repository the previous script from @xvtom doesn't work anymore, now we have to deal with tags so basically this script will download the master and then it will try to checkout the tag that you specify (1.0.2h otherwise).
+
+
+All comments and help are welcome.
+
+
+Tested on OSX 10.11.5 (El Captain)
+
 
 ## Setup Android Development on Mac OS X
 
@@ -24,23 +33,16 @@ source ~/.bashrc
 ```
 
 ## Usage: `./build-openssl-android.sh <version>`
-* Build openssl-1.0.1j
+* Build openssl-1.0.2h
 
 ```!bash
-./build-openssl-android.sh 1.0.1j
+./build-openssl-android.sh 1_0_2h
 ```
 
 * Build openssl-1.0.2-beta3
 
 ```!bash
-./build-openssl-android.sh 1.0.2-beta3
-```
-
-* Build for Android-L
-
-```!bash
-# Install Android-L sdk using `android` command first
-_ANDROID_API="android-L" ./build-openssl-android.sh
+./build-openssl-android.sh 1_0_2-beta3
 ```
 
 ## Reference
