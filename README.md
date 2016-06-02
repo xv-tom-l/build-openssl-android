@@ -1,7 +1,7 @@
 # build-openssl-android
 A simple shell script for building openssl android.
 
-Now that OpenSSL moved from their webpage to a GitHub repository the previous shell script from @xvtom doesn't work anymore, I'm just taking the idea and improving it to make it work with this changes, now we have to deal with tags so basically this script will download the master and then it will try to checkout the tag that you specify (1.0.2h otherwise).
+Now that OpenSSL moved from their webpage to a GitHub repository the previous script from @xvtom doesn't work anymore, now we have to deal with tags so basically this script will download the master and then it will try to checkout the tag that you specify (1.0.2h otherwise).
 
 
 All comments and help are welcome.
