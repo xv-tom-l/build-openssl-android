@@ -15,13 +15,13 @@ fi
 # Download openssl source
 if [ ! -e ${OPENSSL_TARBALL} ]; then
 	echo "Downloading openssl-${OPENSSL_VERSION}.tar.gz..."
-	curl -# -O http://www.openssl.org/source/${OPENSSL_TARBALL}
+	curl -# -O https://www.openssl.org/source/${OPENSSL_TARBALL}
 fi
 
 # Verify the source file
 if [ ! -e ${OPENSSL_TARBALL}.sha1 ]; then
 	echo -n "Verifying...	"
-	curl -o ${OPENSSL_TARBALL}.sha1 -s http://www.openssl.org/source/${OPENSSL_TARBALL}.sha1
+	curl -o ${OPENSSL_TARBALL}.sha1 -s https://www.openssl.org/source/${OPENSSL_TARBALL}.sha1
 	CHECKSUM=`cat ${OPENSSL_TARBALL}.sha1`
 	ACTUAL=`shasum ${OPENSSL_TARBALL} | awk '{ print \$1 }'`
 	if [ "x$ACTUAL" == "x$CHECKSUM" ]; then
